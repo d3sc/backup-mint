@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+case $1 in
+    home)
+        cd ~ && ls -a
+    ;;
+    document)
+        cd ~/Documents && ls -a
+    ;;
+    belajar)
+        cd ~/Documents/belajar && ls -a
+    ;;
+    project)
+        cd ~/Documents/project && ls -a
+    ;;
+    tools)
+        cd ~/Documents/tools && ls -a
+    ;;
+    *)
+        echo "Invalid parameter!"
+    ;;
+esac

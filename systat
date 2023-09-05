@@ -1,0 +1,12 @@
+#!/bin/bash
+
+con="$(iwgetid -r)"
+sound_level="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')"
+
+echo "username: $(whoami)"
+date +"Today is: %A %d %B %Y"
+date +"Hours: %T"
+echo "$(battery) (important!)" 
+echo "internet connection: ${con} (important!)"
+echo "sound level: ${sound_level}"
+echo "$(df -h /)"

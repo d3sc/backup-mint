@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+#* Alias Teleport
+documents=~/Documents
+
+alias tp-home="cd ~ && ls -a"
+alias tp-document="cd $documents && ls -a"
+alias tp-download="cd ~/Downloads && ls -a"
+alias tp-video="cd ~/Videos && ls -a"
+alias tp-picture="cd ~/Pictures && ls -a"
+alias tp-music="cd ~/Music && ls -a"
+
+alias tp-belajar="cd $documents/belajar && ls -a"
+alias tp-project="cd $documents/belajar && ls -a"
+alias tp-tools="cd $documents/belajar && ls -a"
+alias tp-bin="cd /usr/bin && ls -a"
+
+#* Alias
+alias python="python3"
+
+alias shutup="shutdown now"
+
+alias search-package="apt search"
+alias install-package="apt install"
+alias remove-package="apt remove --purge --autoremove"
+alias update-upgrade="apt update && apt upgrade"

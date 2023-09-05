@@ -1,0 +1,23 @@
+#!/bin/bash
+
+charge_level="$(cat /sys/class/power_supply/BAT1/capacity)"
+ac_adapter="$(cat /sys/class/power_supply/ACAD/online)"
+
+# ditengah antara sufficient dan critical itu masuknya ke Insuficient
+sufficient_level=75
+critical_level=30
+
+if [[ ac_adapter -eq 0 ]]; then
+
+  if [ $charge_level -gt $sufficient_level ]; then 
+    echo "battery sufficient, level:" $charge_level"%"
+  elif [ $charge_level -le $sufficient_level ] && [ $charge_level -gt $critical_level ]; then
+    echo "Insufficient battery, level:" $charge_level"%"
+  elif [ $charge_level -le $critical_level ]; then
+      echo "critical battery, level:" $charge_level"%"
+      zenity --warning --text="critical battery, level: ${charge_level}%"
+  fi 
+
+else
+  echo "battery is charging, level:" $charge_level"%"
+fi
