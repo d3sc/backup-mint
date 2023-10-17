@@ -14,6 +14,7 @@ alias tp-belajar="cd $documents/belajar && ls -a"
 alias tp-project="cd $documents/belajar && ls -a"
 alias tp-tools="cd $documents/belajar && ls -a"
 alias tp-bin="cd /usr/bin && ls -a"
+alias tp-htdocs="cd /opt/lampp/htdocs && ls -a"
 
 #* Alias
 alias python="python3"
@@ -22,5 +23,6 @@ alias shutup="shutdown now"
 
 alias search-package="apt search"
 alias install-package="apt install"
+alias search-package-installed="apt list --installed | grep"
 alias remove-package="apt remove --purge --autoremove"
 alias update-upgrade="apt update && apt upgrade"
