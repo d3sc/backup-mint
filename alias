@@ -18,6 +18,10 @@ alias tp-htdocs="cd /opt/lampp/htdocs && ls -a"
 
 #* Alias
 alias python="python3"
+alias cr="~/Documents/code_editor/cr.AppImage $1"
+alias xampp="sudo /opt/lampp/./manager-linux-x64.run"
+alias nv="nvim $1"
+alias reload="exec zsh"
 
 alias shutup="shutdown now"
 

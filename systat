@@ -6,7 +6,7 @@ sound_level="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ prin
 echo "username: $(whoami)"
 date +"Today is: %A %d %B %Y"
 date +"Hours: %T"
-echo "$(battery) (important!)" 
+echo "$(. ~/backup-mint/battery) (important!)" 
 echo "internet connection: ${con} (important!)"
 echo "sound level: ${sound_level}"
 echo "$(df -h /)"

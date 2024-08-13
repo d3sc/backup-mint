@@ -5,7 +5,7 @@ ac_adapter="$(cat /sys/class/power_supply/ACAD/online)"
 
 # ditengah antara sufficient dan critical itu masuknya ke Insuficient
 sufficient_level=75
-critical_level=30
+critical_level=20
 
 if [[ ac_adapter -eq 0 ]]; then
 
